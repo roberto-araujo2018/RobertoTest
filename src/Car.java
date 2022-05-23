@@ -1,15 +1,33 @@
 public class Car {
-    private int doors;
+    private int cylinders;
     private int wheels;
-    private String model;
-    private String engine;
-    private String color;
+    private String name;
+    private boolean engine;
 
-    public void setModel(String model){
-        this.model = model;
+    public Car(int cylinders, String name) {
+        this.cylinders = cylinders;
+        this.name = name;
+        this.wheels = 4;
+        this.engine = true;
     }
 
-    public String getModel(){
-        return this.model;
+    public String startEngine () {
+        return this.name + " startEngine()";
+    }
+
+    public String accelerate (){
+        return this.name + " accelerate()";
+    }
+
+    public String brake(){
+        return this.name + " brake()";
+    }
+
+    public int getCylinders() {
+        return cylinders;
+    }
+
+    public String getName() {
+        return name;
     }
 }
