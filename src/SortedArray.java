@@ -1,12 +1,6 @@
 import java.util.*;
 public class SortedArray {
-    //private int size;
-    //private int[] myArray = new int[size];
     private static Scanner scanner = new Scanner(System.in);
-
-//    public SortedArray(int[] myArray) {
-//        this.myArray = myArray;
-//    }
 
     public static void printArray(int[] myArray) {
         for (int i = 0; i < myArray.length ; i++) {
@@ -18,6 +12,7 @@ public class SortedArray {
         for (int i =0; i < number; i++){
             myArray[i] = scanner.nextInt();
         }
+        System.out.println(Arrays.toString(myArray));
         return myArray;
     }
     public static int[] sortIntegers(int[] array) {
