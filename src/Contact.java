@@ -1,12 +1,8 @@
-//package com.timbuchalka;
 
-/**
- * Created by dev on 28/08/15.
- */
 public class Contact {
     private String name;
     private String phoneNumber;
-
+    private static MobilePhone mobilePhone = new MobilePhone("0039 330 4404");
     public Contact(String name, String phoneNumber) {
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -21,6 +17,12 @@ public class Contact {
     }
 
     public static Contact createContact(String name, String phoneNumber) {
-        return new Contact(name, phoneNumber);
+        Contact existingContactRecord = mobilePhone.queryContact(name);
+        if (existingContactRecord == null) {
+            return new Contact(name, phoneNumber);
+        } else {
+            System.out.println("Name: " + existingContactRecord.getName() + " phone number is " + existingContactRecord.getPhoneNumber());
+        }
+        return existingContactRecord;
     }
 }
