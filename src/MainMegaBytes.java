@@ -1,8 +1,22 @@
 public class MainMegaBytes {
     public static void main(String[] args) {
-        FirstLastDigitSum sum =new FirstLastDigitSum();
-        int num = sum.sumFirstAndLastDigit(10122345);
-        System.out.println(num);
+        LastDigitChecker ldc = new LastDigitChecker();
+        boolean ret;
+        ret = ldc.hasSameLastDigit(777,71,77);
+        System.out.println(ret);
+
+//        NumberToWords ntw = new NumberToWords();
+//        ntw.numberToWords(12);
+
+
+//        EvenDigitSum eds = new EvenDigitSum();
+//        int num = eds.getEvenDigitSum(123456789);
+//        System.out.println("sum " + num);
+
+
+//        FirstLastDigitSum sum =new FirstLastDigitSum();
+//        int num = sum.sumFirstAndLastDigit(10122345);
+//        System.out.println(num);
 
 //        NumberPalindrome np = new NumberPalindrome();
 //        boolean ret;
